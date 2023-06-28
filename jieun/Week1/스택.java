@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class stack {
+public class 스택 {
     static class Stack {
         int ptr; // 스택 포인터
         int[] stk;
@@ -41,6 +41,7 @@ public class stack {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
         // 명령어 수 입력
         int n = Integer.parseInt(br.readLine());
 
