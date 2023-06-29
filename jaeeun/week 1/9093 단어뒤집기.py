@@ -8,4 +8,3 @@ for i in range(n):
     for word in quote :
         print(word[::-1], end=' ')
     print()
-    
