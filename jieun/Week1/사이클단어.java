@@ -15,9 +15,7 @@ public class 사이클단어 {
             for (int j = 1; j < str[i].length(); j++) {
                 str_cycle[i][j] = str[i].substring(j) + str[i].substring(0, j);
             }
-
             boolean chk = true;
-
             for (int j = 0; chk && j < i; j++) {
                 for (int k = 0; chk && k < str[j].length(); k++) {
                     if (str[i].equals(str_cycle[j][k]))
