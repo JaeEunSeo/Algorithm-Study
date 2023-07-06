@@ -26,4 +26,4 @@ for i in range(n):
         else:print("0")
     elif command[0] == 'top':
         if not stack : print("-1")
-        else : print(stack[len(stack)-1])
+        else : print(stack[-1])
