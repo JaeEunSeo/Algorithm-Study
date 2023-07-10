@@ -2,7 +2,7 @@ package jieun.Week2;
 
 import java.io.*;
 
-public class Main {
+public class 상하좌우 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -37,5 +37,10 @@ public class Main {
         bw.flush();
         bw.close();
         br.close();
+    }
+
+    @Override
+    public String toString() {
+        return "상하좌우 []";
     }
 }
