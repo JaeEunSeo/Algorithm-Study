@@ -1,3 +1,5 @@
+#에디터
+
 from sys import stdin
 
 stack1 = list(input())
