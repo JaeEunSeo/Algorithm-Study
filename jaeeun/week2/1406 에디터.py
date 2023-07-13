@@ -1,7 +1,9 @@
+#에디터
+
 from sys import stdin
 
-stack1 = list(input())
-stack2 = []
+stack1 = list(input())      #앞쪽 stack
+stack2 = []                 #뒤쪽 stack
 
 for _ in range(int(input())):
     command = list(stdin.readline().split())
