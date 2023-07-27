@@ -3,12 +3,14 @@
 #include <iostream>
 using namespace std;
 
+int factorial(int num){ // 팩토리얼 재귀함수
+    if (num > 2) num = factorial (num - 1);
+    return num;
+}
+
 int main(){
-    int a = 0;;
-    int b = 1;
-    while (-1 < a <= 12) cin >> a;
-    while (a--){
-        b = b * a;
-    }
-    cout << b;
+    int num, result = 1; // fac 0 이면 1을 출력하게 된다.
+    cin >> num;
+    if (num!=0) result = factorial(num);
+    cout << result;
 }
