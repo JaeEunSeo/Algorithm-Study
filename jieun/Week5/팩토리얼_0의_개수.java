@@ -2,7 +2,7 @@ package jieun.Week5;
 
 import java.io.*;
 
-public class Main {
+public class 팩토리얼_0의_개수 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
