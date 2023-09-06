@@ -4,22 +4,20 @@
 
 using namespace std;
 
-int N, sum;
+int N, Sum;
+int Ans = 0;
 vector<int> arr;
 
-int cnt = 0;
 void solve(int idx, int tmp) {
+	if (idx == N) return; // idx N-1 까지 탐색한 경우 종료
+	if (tmp + arr[idx] == Sum) Ans++; // return을 안함에 주의
 
-	if (idx == N) return;
-	if (tmp + arr[idx] == sum) cnt++;
-
-	solve(idx + 1, tmp);
-	solve(idx + 1, tmp + arr[idx]);
+	solve(idx + 1, tmp); // idx 수를 더하지 않는 경우
+	solve(idx + 1, tmp + arr[idx]); // idx 수를 더하는 경우
 }
 
 int main() {
-	
-	cin >> N >> sum;
+	cin >> N >> Sum;
 
 	for (int i = 0; i < N; i++) {
 		int tmp;
@@ -28,54 +26,7 @@ int main() {
 	}
 
 	solve(0, 0);
-	cout << cnt;
+	cout << Ans;
 
 	return 0;
 }
-
-/*
-<< 오 답 >>
-
-#include <iostream>
-using namespace std;
-
-int N, S;
-int arr[20];
-bool selected[20];
-int ans = 0;
-int tmp = 0;
-
-void DFS(int Cnt, int goalCnt, int sumOfNum){
-    if (Cnt = goalCnt){
-        if (sumOfNum == S) ans ++;
-        return;
-    }
-    for (int i = 0; i < N; i++){ // N번째 인덱스까지 탐색
-        if(!selected[i]){
-            selected[i] = true;
-            DFS(Cnt + 1, goalCnt, sumOfNum + arr[i]);
-            selected[i] = false;
-        }
-    }
-}
-
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    cin >> N >> S; // N개의 정수, 합이 S가 됨
-
-    for (int i = 0; i < N; i++)
-        cin >> arr[i];
-
-    for (int j = 1; j <= N; j++){ // 수를 j개 선택할 때
-        tmp = 0;
-        DFS(0, j, 0);
-    }
-
-    cout << ans;
-
-
-}
-*/
