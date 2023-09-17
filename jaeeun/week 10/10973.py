@@ -1,3 +1,4 @@
+#이전 순열
 import sys
 input = sys.stdin.readline
 

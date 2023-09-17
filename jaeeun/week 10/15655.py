@@ -1,3 +1,4 @@
+#N과 M(6)
 import sys
 input = sys.stdin.readline
 
